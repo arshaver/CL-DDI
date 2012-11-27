@@ -1,26 +1,27 @@
 ;;;MEBI 531 Project
 ;;;Fall 2012
 ;;;Anthony Shaver
-;;;11/21/2012
-
 
 ;;setup the data
 ;from http://www.pharmacologyweekly.com/content/pages/cytochrome-cyp-p450-enzyme-medication-herbs-substrates
 (defvar *substrates*
- `(
-  (CYP1A2 (
-   Acetaminophen Amitriptyline Asenapine Bendamustine Caffeine Chlordiazepoxide Chlorpromazine Clopidogrel Clozapine Cyclobenzaprine Febuxostat Flutamide Imipramine Leflunomide Mexiletine Nabumetone Naproxen Nortiptyline Olanzapine Propafenone Propranolol Ranitidine Roflumilast Riluzole Tacrine Theophylline Tizanidine Zileuton Zolpidem
-   ))
+    `((CYP1A2 (
+        Acetaminophen Amitriptyline Asenapine Bendamustine Caffeine Chlordiazepoxide Chlorpromazine Clopidogrel Clozapine Cyclobenzaprine Febuxostat Flutamide Imipramine Leflunomide Mexiletine Nabumetone Naproxen Nortiptyline Olanzapine Propafenone Propranolol Ranitidine Roflumilast Riluzole Tacrine Theophylline Tizanidine Zileuton Zolpidem
+        ))
   (CYP2B6 (
    Bupropion Cyclophosphamide Clopidogrel Efavirenz Ifosfamide Ketamine Methadone Sertraline
    ))
-  (CYP2C8 (Amiodarone Amodiaquine Benzphetamine Carbamazepine Cerivastatin Docetaxel Everolimus Febuxostat Fluvastatin Isotretinoin Phenytoin Pioglitazone Retinol Repaglinide Rosiglitazone Tolbutamide Torsemide Verapamil Zopiclone
+  (CYP2C8 (
+   Amiodarone Amodiaquine Benzphetamine Carbamazepine Cerivastatin Docetaxel Everolimus Febuxostat Fluvastatin Isotretinoin Phenytoin Pioglitazone Retinol Repaglinide Rosiglitazone Tolbutamide Torsemide Verapamil Zopiclone
    ))
-  (CYP2C9 (Amitriptyline Carvedilol Celecoxib Chlorpheniramine Chloramphenicol Clomipramine Clopidogrel Desogstrel Diclofenac Dronabinol Febuxostat Fluoxetine Flurbiprofen Fluvastatin Formoterol Glibenclamide Glimepiride Glipizide Hexobarbital Ibuprofen Imipramine Indomethacin Irbesartan Irinotecan Ketamine Lomoxicam Losartan Mefenamic Meloxicam Mephenytoin Montelukast Nateglinide Omeprazole Phenylbutazone Piroxicam Quetiapine Rosiglitazone Sertraline Sildenafil Sulfamethoxazole Sulfinpyrazone Suprofen Tamoxifen Tienilic Tolbutamide Torsemide THC Testosterone Valdecoxib Vardenafil Valsartan Voriconazole Warfarin Zafirlukast Zileuton
+  (CYP2C9 (
+   Amitriptyline Carvedilol Celecoxib Chlorpheniramine Chloramphenicol Clomipramine Clopidogrel Desogstrel Diclofenac Dronabinol Febuxostat Fluoxetine Flurbiprofen Fluvastatin Formoterol Glibenclamide Glimepiride Glipizide Hexobarbital Ibuprofen Imipramine Indomethacin Irbesartan Irinotecan Ketamine Lomoxicam Losartan Mefenamic Meloxicam Mephenytoin Montelukast Nateglinide Omeprazole Phenylbutazone Piroxicam Quetiapine Rosiglitazone Sertraline Sildenafil Sulfamethoxazole Sulfinpyrazone Suprofen Tamoxifen Tienilic Tolbutamide Torsemide THC Testosterone Valdecoxib Vardenafil Valsartan Voriconazole Warfarin Zafirlukast Zileuton
    ))
-  (CYP2C19 (Amitriptyline Carisoprodol Cilostazol Citalopram Clomipramine Clopidogrel Cyclophosphamide Desipramine Diazepam Escitalopram Esomeprazole Formoterol Hexobarbital Imipramine Indomethacin Lacosamide Lansoprazole Loratidine Mephenytoin Mephobarbital Moclobemide Nelfinavir Milutamide Notripytline Omeprazole Pantoprazole Pentamidine Phenobarbital Phenytoin Progresterone Proguanil Propranolol Rabeprazole Ranitidine Sertraline Teniposide Thioridazine Tolbutamide Voriconazole Warfarin
+  (CYP2C19 (
+   Amitriptyline Carisoprodol Cilostazol Citalopram Clomipramine Clopidogrel Cyclophosphamide Desipramine Diazepam Escitalopram Esomeprazole Formoterol Hexobarbital Imipramine Indomethacin Lacosamide Lansoprazole Loratidine Mephenytoin Mephobarbital Moclobemide Nelfinavir Milutamide Notripytline Omeprazole Pantoprazole Pentamidine Phenobarbital Phenytoin Progresterone Proguanil Propranolol Rabeprazole Ranitidine Sertraline Teniposide Thioridazine Tolbutamide Voriconazole Warfarin
    ))
-  (CYP2D6 (Alprenolol Amitriptyline Amphetamine Aripirazole Asenpine Atomoxetine Bifuralol Bisoprolol Captopril Carvedilol Cevimeline Chlorpheniramine Chlorporamzine Chlorpropamide Cinacalcet Clemastine Clomipramine Clozapine Codeine Cyclobenzaprine Darifenacin Debroquine Desipramine Dexfenfluramine Dextromethorphan Diphenhydramine Dolasetron Donepezil Doxepin Duloxetine Encainide Fenfluramine Fluphenazine Fentanyl Flecainide Fluoxetine Fluvoxamine Formoterol Galantamine Guanoxan Haloperidol Hydrocodone Hydroxyzine Iloperidone Imipramine Indoramin Lidocaine Maprotiline Meperidine Methadone Methamphetamine Methoxyamphetamine Metoclopramide Metoprolol Mexiletine Minaprine Mirtazapine Morphine Nebivolol Nortriptyline Olanzapine Ondansetron Oxycodone Paroxetine Perhexiline Perphenazine Propafenone Propoxyphene Propranolol Quetiapine Quinidine Ranolazine Risperidone Ritonavir Sertraline Sparteine Tamoxifen Thioridazine Timolol Tolterodine Tramadol Trazadone Tripelennamine Tropisetron Venlafaxine
+  (CYP2D6 (
+      Alprenolol Amitriptyline Amphetamine Aripirazole Asenpine Atomoxetine Bifuralol Bisoprolol Captopril Carvedilol Cevimeline Chlorpheniramine Chlorporamzine Chlorpropamide Cinacalcet Clemastine Clomipramine Clozapine Codeine Cyclobenzaprine Darifenacin Debroquine Desipramine Dexfenfluramine Dextromethorphan Diphenhydramine Dolasetron Donepezil Doxepin Duloxetine Encainide Fenfluramine Fluphenazine Fentanyl Flecainide Fluoxetine Fluvoxamine Formoterol Galantamine Guanoxan Haloperidol Hydrocodone Hydroxyzine Iloperidone Imipramine Indoramin Lidocaine Maprotiline Meperidine Methadone Methamphetamine Methoxyamphetamine Metoclopramide Metoprolol Mexiletine Minaprine Mirtazapine Morphine Nebivolol Nortriptyline Olanzapine Ondansetron Oxycodone Paroxetine Perhexiline Perphenazine Propafenone Propoxyphene Propranolol Quetiapine Quinidine Ranolazine Risperidone Ritonavir Sertraline Sparteine Tamoxifen Thioridazine Timolol Tolterodine Tramadol Trazadone Tripelennamine Tropisetron Venlafaxine
    ))
   (CYP2E1 (Acetaminophen Disulfiram Theophylline
    ))
@@ -81,9 +82,9 @@
   should never be nil"
   (if (listp expr)
       (case (first expr)
-	(and (every #'prove (reverse (rest expr))))
-	(or  (some #'prove (rest expr)))
-	(not (not (prove (first (rest expr))))))
+    (and (every #'prove (reverse (rest expr))))
+    (or  (some #'prove (rest expr)))
+    (not (not (prove (first (rest expr))))))
     (prove-simple expr)))
 
 (defun prove-simple (pred)
@@ -91,8 +92,8 @@
   factual assertion or expressions to prove"
   (multiple-value-bind (ants found) (gethash pred *knowledge*)
     (cond ((not found) nil)
-	  ((member nil ants) t) ;; find won't work here!
-	  (t (some #'prove ants)))))
+      ((member nil ants) t) ;; find won't work here!
+      (t (some #'prove ants)))))
 
 ;;build the knowledge
 ;substrates, in the form (<- (substrate-of drug enzyme))
@@ -100,8 +101,7 @@
     (let ((enz (first x)) (drugs (second x)))
         (dolist (drug drugs)
             (<- (substrate-of drug enz))
-            (print drug)
-            (print enz)
+            (format t "drug ~A is a substrate of enzyme ~A~%" drug enz)
             )
         )
     )
@@ -111,8 +111,7 @@
     (let ((enz (first x)) (drugs (second x)))
         (dolist (drug drugs)
             (<- (inhibits drug enz))
-            (print drug)
-            (print enz)
+            (format t "drug ~A inhibits enzyme ~A~%" drug enz)
             )
         )
     )
@@ -122,8 +121,7 @@
     (let ((enz (first x)) (drugs (second x)))
         (dolist (drug drugs)
             (<- (induces drug enz))
-            (print drug)
-            (print enz)
+            (format t "drug ~A induces enzyme ~A~%" drug enz)
             )
         )
     )
