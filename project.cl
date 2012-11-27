@@ -25,7 +25,7 @@
    ))
   (CYP2E1 (Acetaminophen Disulfiram Theophylline
    ))
-  (CYP3A4 (Abiraterone Alfentanil Alfuzosin Aliskiren Almotriptan Alprazolam Amitriptyline Amiodarone Amlodipine Amprenavir Aprepitant Aripiprazole Astemizole Atazanavir Atorvastatin Bepridil Bexarotene Boceprevir Bromocriptine Budesonide Buprenorphine Buspirone Cafergot Caffeine Cannabinoids Carbamazepine Cerivastatin Cevimeline Chlordiazepoxide Cinacalcet Citalopram Clarithromycin Clindamycin Clomipramine Clonazepam Clopidogrel Clorazepate Clozapine Cocaine Codeine Colchicine Cyclophosphamide Cyclosporine Dapsone Darifenacin Darunavir Delavirdine Desogestrel Dextromethorphan Diazepam Dihdroergotamine Disopyramide Diltiazem Docetaxel Dofetilide Dolasetron Domperidone Donepezil Doxorubicin Dronabinol Dutasteride Efavirenz Eplerenone Ergotamine Erlotinib Erythromycin Esomeprazole Eszoplicone Ethinylestradiol Ethosuximide Etonogestrel Etoposide Everolimus Exemestane Felodipine Fentanyl Finasteride Fexofenadine Flurazepam Flutamide Fluticasone Galantamine Haloperidol Hydrocodone Iloperidone Imatinib Imipramine Indinavir Irinotecan Isradipine Itraconazole Ketamine Ketoconazole Lansoprazole Letrozole Lercanidipine Lidocaine Loratadine Lopinavir Lovastatin Methadone Midazolam Mifepristone Mirtazapine Modafinil Mometasone Montelukast Nateglinide Nelfinavir Nevirapine Nicardipine Nifedipine Nisoldipine Nitrendipine Norethindrone Ondansetron Omeprazole Oxybutynin Oxycodone Paclitaxel Pantoprazole Pioglitazone Propafenone Propranolol Quetiapine Quinidine Quinine Rabeprazole Ramelteon Ranitidine Ranolazine Repaglinide Rifampin Ritonavir Rivaroxaban Rofulmilast Salmeterol Saquinavir Saxagliptin Sertraline Sibutramine Sildenafil Simvastatin Sirolimus Solifenacin Sorafenib Sufentanil Sunitinib Steroids Tacrolimus Tadalafil Tamoxifen Telaprevir Telithromycin Temazepam Temsirolimus THC Theophylline Tiagabine Tinidazole Tipranavir Tolterodine Toremifene Tramadol Trazadone Triazolam Trimetrexate Valdecoxib Valproic acid Vardenafil Verapamil Vinblastine Vincristine Voriconazole Warfarin Zaleplon Zileuton Ziprasidone Zolpidem Zonisamide
+  (CYP3A4 (Abiraterone Alfentanil Alfuzosin Aliskiren Almotriptan Alprazolam Amitriptyline Amiodarone Amlodipine Amprenavir Aprepitant Aripiprazole Astemizole Atazanavir Atorvastatin Bepridil Bexarotene Boceprevir Bromocriptine Budesonide Buprenorphine Buspirone Cafergot Caffeine Cannabinoids Carbamazepine Cerivastatin Cevimeline Chlordiazepoxide Cinacalcet Citalopram Clarithromycin Clindamycin Clomipramine Clonazepam Clopidogrel Clorazepate Clozapine Cocaine Codeine Colchicine Cyclophosphamide Cyclosporine Dapsone Darifenacin Darunavir Delavirdine Desogestrel Dextromethorphan Diazepam Dihdroergotamine Disopyramide Diltiazem Docetaxel Dofetilide Dolasetron Domperidone Donepezil Doxorubicin Dronabinol Dutasteride Efavirenz Eplerenone Ergotamine Erlotinib Erythromycin Esomeprazole Eszoplicone Ethinylestradiol Ethosuximide Etonogestrel Etoposide Everolimus Exemestane Felodipine Fentanyl Finasteride Fexofenadine Flurazepam Flutamide Fluticasone Galantamine Haloperidol Hydrocodone Iloperidone Imatinib Imipramine Indinavir Irinotecan Isradipine Itraconazole Ketamine Ketoconazole Lansoprazole Letrozole Lercanidipine Lidocaine Loratadine Lopinavir Lovastatin Methadone Midazolam Mifepristone Mirtazapine Modafinil Mometasone Montelukast Nateglinide Nelfinavir Nevirapine Nicardipine Nifedipine Nisoldipine Nitrendipine Norethindrone Ondansetron Omeprazole Oxybutynin Oxycodone Paclitaxel Pantoprazole Pioglitazone Propafenone Propranolol Quetiapine Quinidine Quinine Rabeprazole Ramelteon Ranitidine Ranolazine Repaglinide Rifampin Ritonavir Rivaroxaban Rofulmilast Salmeterol Saquinavir Saxagliptin Sertraline Sibutramine Sildenafil Simvastatin Sirolimus Solifenacin Sorafenib Sufentanil Sunitinib Steroids Tacrolimus Tadalafil Tamoxifen Telaprevir Telithromycin Temazepam Temsirolimus THC Theophylline Tiagabine Tinidazole Tipranavir Tolterodine Toremifene Tramadol Trazadone Triazolam Trimetrexate Valdecoxib Valproic Vardenafil Verapamil Vinblastine Vincristine Voriconazole Warfarin Zaleplon Zileuton Ziprasidone Zolpidem Zonisamide
    ))
  ))
 ;from http://www.pharmacologyweekly.com/content/pages/medications-herbs-cytochrome-p450-cyp-enzyme-inhibitors
@@ -37,7 +37,7 @@
     ))
   (CYP2C8 (Anastrozole Ezetimibe Gemfibrozil Montelukast Nicardipine Sulfinpyrazone Trimethoprim
     ))
-  (CYP2C9 (Amiodarone Atazanavir Cimetidine Clopidogrel Cotrimoxazole Delavirdine Disulfiram Efavirenz Fenofibrate Fluconazole Fluorouracil Fluoxetine Fluvastatin Fluvoxamine Gemfibrozil Imatinib Isoniazid Itraconazole Ketoconazole Leflunomide Lovastatin Methoxsalen Metronidazole Mexiletine Modafinil Nalidixic acid Norethindrone Norfloxacin Omeprazole Contraceptives Paroxetine Phenylbutazone Probenecid Sertraline Sulfamethoxazole Sulfaphenazole Sulfonamides Tacrine Teniposide Ticlodipine Tipranavir Troleandomycin Voriconazole Zafirlukast Zileutin
+  (CYP2C9 (Amiodarone Atazanavir Cimetidine Clopidogrel Cotrimoxazole Delavirdine Disulfiram Efavirenz Fenofibrate Fluconazole Fluorouracil Fluoxetine Fluvastatin Fluvoxamine Gemfibrozil Imatinib Isoniazid Itraconazole Ketoconazole Leflunomide Lovastatin Methoxsalen Metronidazole Mexiletine Modafinil Nalidixic Norethindrone Norfloxacin Omeprazole Contraceptives Paroxetine Phenylbutazone Probenecid Sertraline Sulfamethoxazole Sulfaphenazole Sulfonamides Tacrine Teniposide Ticlodipine Tipranavir Troleandomycin Voriconazole Zafirlukast Zileutin
     ))
   (CYP2C19 (Cimetidine Citalopram Delavirdine Efavirenz Felbamate Fluconazole Fluoxetine Fluvastatin Fluvoxamine Indomethacin Isoniazid Ketoconazole Lansoprazole Modafinil Omperazole Oxcarbazepine Probenecid Ticlodipine Topiramate
     ))
@@ -69,31 +69,9 @@
     ))
   ))
   
-;;inference-prop code
-;;copied from I. Kalet
-(defvar *knowledge* (make-hash-table))
-
-(defmacro <- (con &optional ant)
-  "adds ant to the hash table entry for con, even if ant is nil"
-  `(length (push ',ant (gethash ',con *knowledge*))))
-
-(defun prove (expr)
-  "allow for single term as well as complex exprs - note that expr
-  should never be nil"
-  (if (listp expr)
-      (case (first expr)
-    (and (every #'prove (reverse (rest expr))))
-    (or  (some #'prove (rest expr)))
-    (not (not (prove (first (rest expr))))))
-    (prove-simple expr)))
-
-(defun prove-simple (pred)
-  "checks if an entry is present, and succeeds if there is a nil for
-  factual assertion or expressions to prove"
-  (multiple-value-bind (ants found) (gethash pred *knowledge*)
-    (cond ((not found) nil)
-      ((member nil ants) t) ;; find won't work here!
-      (t (some #'prove ants)))))
+;;load the inference code
+;;copied from http://faculty.washington.edu/ikalet/courses/lisp/code/inference.cl
+(load "inference.cl")
 
 ;;build the knowledge
 ;substrates, in the form (<- (substrate-of drug enzyme))
@@ -125,3 +103,32 @@
             )
         )
     )
+
+;;define the rules
+(<- (interacts ?a ?b)
+    (and (inhibits ?a ?c)
+        (substrate-of ?b ?c)
+        )
+    )
+
+(<- (interacts ?a ?b)
+    (and (induces ?a ?c)
+        (substrate-of ?b ?c)
+        )
+    )
+
+;Reciprocals of above 2
+(<- (interacts ?a ?b)
+    (and (inhibits ?b ?c)
+        (substrate-of ?a ?c)
+        )
+    )
+
+(<- (interacts ?a ?b)
+    (and (induces ?b ?c)
+        (substrate-of ?a ?c)
+        )
+    )
+
+;;some queries
+(prove '(interacts warfarin amiodarone)
