@@ -3,6 +3,8 @@
 ;;;Anthony Shaver
 
 ;;setup the data
+;PGP data from http://www.hanstenandhorn.com/hh-article12-08.pdf
+
 ;from http://www.pharmacologyweekly.com/content/pages/cytochrome-cyp-p450-enzyme-medication-herbs-substrates
 (defvar *substrates*
     `((CYP1A2 (
@@ -27,7 +29,9 @@
    ))
   (CYP3A4 (Abiraterone Alfentanil Alfuzosin Aliskiren Almotriptan Alprazolam Amitriptyline Amiodarone Amlodipine Amprenavir Aprepitant Aripiprazole Astemizole Atazanavir Atorvastatin Bepridil Bexarotene Boceprevir Bromocriptine Budesonide Buprenorphine Buspirone Cafergot Caffeine Cannabinoids Carbamazepine Cerivastatin Cevimeline Chlordiazepoxide Cinacalcet Citalopram Clarithromycin Clindamycin Clomipramine Clonazepam Clopidogrel Clorazepate Clozapine Cocaine Codeine Colchicine Cyclophosphamide Cyclosporine Dapsone Darifenacin Darunavir Delavirdine Desogestrel Dextromethorphan Diazepam Dihdroergotamine Disopyramide Diltiazem Docetaxel Dofetilide Dolasetron Domperidone Donepezil Doxorubicin Dronabinol Dutasteride Efavirenz Eplerenone Ergotamine Erlotinib Erythromycin Esomeprazole Eszoplicone Ethinylestradiol Ethosuximide Etonogestrel Etoposide Everolimus Exemestane Felodipine Fentanyl Finasteride Fexofenadine Flurazepam Flutamide Fluticasone Galantamine Haloperidol Hydrocodone Iloperidone Imatinib Imipramine Indinavir Irinotecan Isradipine Itraconazole Ketamine Ketoconazole Lansoprazole Letrozole Lercanidipine Lidocaine Loratadine Lopinavir Lovastatin Methadone Midazolam Mifepristone Mirtazapine Modafinil Mometasone Montelukast Nateglinide Nelfinavir Nevirapine Nicardipine Nifedipine Nisoldipine Nitrendipine Norethindrone Ondansetron Omeprazole Oxybutynin Oxycodone Paclitaxel Pantoprazole Pioglitazone Propafenone Propranolol Quetiapine Quinidine Quinine Rabeprazole Ramelteon Ranitidine Ranolazine Repaglinide Rifampin Ritonavir Rivaroxaban Rofulmilast Salmeterol Saquinavir Saxagliptin Sertraline Sibutramine Sildenafil Simvastatin Sirolimus Solifenacin Sorafenib Sufentanil Sunitinib Steroids Tacrolimus Tadalafil Tamoxifen Telaprevir Telithromycin Temazepam Temsirolimus THC Theophylline Tiagabine Tinidazole Tipranavir Tolterodine Toremifene Tramadol Trazadone Triazolam Trimetrexate Valdecoxib Valproic Vardenafil Verapamil Vinblastine Vincristine Voriconazole Warfarin Zaleplon Zileuton Ziprasidone Zolpidem Zonisamide
    ))
+   (PGP (Colchicine Cyclosporine Digoxin Fexofenadine Indinavir Morphine Sirolimus))
  ))
+
 ;from http://www.pharmacologyweekly.com/content/pages/medications-herbs-cytochrome-p450-cyp-enzyme-inhibitors
 (defvar *inhibitors*
  `(
@@ -47,7 +51,9 @@
     ))
   (CYP3A4 (Amiodarone Amprenavir Aprepitant Atazanavir Boceprevir Cimetidine Ciprofloxacin Clarithromycin Cyclosporine Danazol Delavirdine Diltiazem Efavirenz Erythromycin Estradiol Ezetimibe Fluconazole Fluoxetine Fluvoxamine Gestodene Imatinib Indinavir Isoniazid Itraconazole Ketoconazole Methylprednisolone Mibefradil Miconazole Mifepristone Nefazodone Nelfinavir Nicardipine Nifedipine Norethindrone Norfloxacin Norfluoxetine Oxiconazole Posaconazole Prednisone Quinine Ranolazine Ritonavir Roxithromycin Saquinavir Sertraline Telaprevir Telithromycin Troleandomycin Verapamil Voriconazole Zafirlukast Zileutin
     ))
+    (PGP (Amiodarone Clarithromycin Erythromycin Ketoconazole Quinidine Saquinavir Verapamil))
  ))
+
 ;from http://www.pharmacologyweekly.com/content/pages/medications-herbs-cytochrome-p450-cyp-inducers
 (defvar *inducers*
   `(
@@ -67,10 +73,12 @@
     ))
   (CYP3A4 (Amprenavir Barbituates Carbamazepine Clotrimazole Dexamethasone Efavirenz Ethosuximide Griseofulvin Modafinil Nevirapine Oxcarbazepine Phenobarbital Phenytoin Prednisone Primidone Rifabutin Rifampin Rifapentine Ritonavir Topiramate
     ))
+    (PGP (Carbamazepine Rifampin Tipranavir
+        ))
   ))
-  
+
 ;;load the inference code
-;;copied from http://faculty.washington.edu/ikalet/courses/lisp/code/inference.cl
+;copied from http://faculty.washington.edu/ikalet/courses/lisp/code/inference.cl
 (load "inference.cl")
 
 ;;build the knowledge
@@ -79,7 +87,6 @@
     (let ((enz (first x)) (drugs (second x)))
         (dolist (drug drugs)
             (eval `(<- (substrate-of ,drug ,enz)))
-            (format t "drug ~A is a substrate of enzyme ~A~%" drug enz)
             )
         )
     )
@@ -89,7 +96,6 @@
     (let ((enz (first x)) (drugs (second x)))
         (dolist (drug drugs)
             (eval `(<- (inhibits ,drug ,enz)))
-            (format t "drug ~A inhibits enzyme ~A~%" drug enz)
             )
         )
     )
@@ -99,36 +105,58 @@
     (let ((enz (first x)) (drugs (second x)))
         (dolist (drug drugs)
             (eval `(<- (induces ,drug ,enz)))
-            (format t "drug ~A induces enzyme ~A~%" drug enz)
             )
         )
     )
 
 ;;define the rules
+;drug A inhibits the CYP450 that drug B is a substrate of, or vice versa
 (<- (interacts ?a ?b)
-    (and (inhibits ?a ?c)
-        (substrate-of ?b ?c)
+    (or
+        (and (inhibits ?a ?c)
+            (substrate-of ?b ?c))
+        (and (inhibits ?b ?c)
+            (substrate-of ?a ?c)
+            )
         )
     )
 
+;drug A induces the CYP450 that drug B is a substrate of, or vice versa
 (<- (interacts ?a ?b)
-    (and (induces ?a ?c)
-        (substrate-of ?b ?c)
+    (or
+        (and (induces ?a ?c)
+            (substrate-of ?b ?c))
+        (and (induces ?b ?c)
+            (substrate-of ?a ?c)
+            )
         )
     )
 
-;Reciprocals of above 2
-(<- (interacts ?a ?b)
-    (and (inhibits ?b ?c)
-        (substrate-of ?a ?c)
+
+;;helper functions
+(defun test-interaction (drug-a drug-b)
+    "wrapper around prove that tests interactions and formats them nicely"
+    (let ((intx (prove `(interacts ,drug-a ,drug-b))))
+        (cond 
+            ((eql nil intx)
+                (format t "~A and ~A do not appear to interact via CYP450s or PGP~%" drug-a drug-b))
+            (t
+                (format t "~A and ~A interact via: ~{~A~^, ~} ~%" drug-a drug-b (extract-cyps intx)))
+            )
         )
     )
 
-(<- (interacts ?a ?b)
-    (and (induces ?b ?c)
-        (substrate-of ?a ?c)
-        )
+(defun extract-cyps (intx)
+    "helper function to extract which CYP450s are returned by a call like (prove '(interacts drug-a drug-b))"
+    (remove-duplicates (mapcar #'cdr (mapcar #'car intx)) :test #'equal)
     )
 
-;;some queries
-(prove '(interacts warfarin amiodarone)
+; TODO figure out how to wrap the function below and make generic for any drug
+; (with-answer (interacts warfarin ?x)
+;     (format t "warfarin interacts with ~A.~%" ?x)
+;     )
+
+;; sample queries
+; what drugs interact with themselves?
+;(with-answer (interacts ?x ?x) (format t "~A interacts with itself~%" ?x))
+
