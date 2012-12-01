@@ -110,7 +110,7 @@
     )
 
 ;;define the rules
-;drug A inhibits the CYP450 that drug B is a substrate of, or vice versa
+;drug A inhibits the enzyme that drug B is a substrate of, or vice versa
 (<- (interacts ?a ?b)
     (or
         (and (inhibits ?a ?c)
@@ -121,7 +121,7 @@
         )
     )
 
-;drug A induces the CYP450 that drug B is a substrate of, or vice versa
+;drug A induces the enzyme that drug B is a substrate of, or vice versa
 (<- (interacts ?a ?b)
     (or
         (and (induces ?a ?c)
@@ -157,6 +157,16 @@
 ;     )
 
 ;; sample queries
-; what drugs interact with themselves?
+; check if 2 drugs interact, using prove
+;(prove '(interacts warfarin amiodarone))
+
+; check if 2 drugs interact, using test-interaction
+;(test-interaction 'warfarin 'amiodarone)
+
+; find all the drugs a certain drug interacts with
+; (with-answer (interacts warfarin ?x) (format t "warfarin interacts with ~A.~%" ?x))
+
+; check what drugs interact with themselves
 ;(with-answer (interacts ?x ?x) (format t "~A interacts with itself~%" ?x))
 
+; etc
