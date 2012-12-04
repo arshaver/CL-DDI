@@ -170,3 +170,4 @@
 ;(with-answer (interacts ?x ?x) (format t "~A interacts with itself~%" ?x))
 
 ; etc
+;some new code!
